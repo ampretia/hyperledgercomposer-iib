@@ -11,8 +11,24 @@ Produce a flow within IIB that includes the LoopbackRequestNode that uses loopba
 ## Setup
 
 - IIB 10 Developer's Edition is very simple to install. 
-- Hyperledger Composer - establish a working scenario, for example the getting started digitalproperty-network. First time, use the getting-started guide 
-from the Hyperledger Composer site.
+- Hyperledger Composer - establish a working scenario, for example the getting started digitalproperty-network. First time, use the getting-started guide from the Hyperledger Composer site.
+
+- IIB Profile
+```
+matthew@matthew-VirtualBox:~/Downloads/iib-10.0.0.8/server/bin$ . ./mqsiprofile
+
+MQSI 10.0.0.8
+/home/matthew/Downloads/iib-10.0.0.8/server
+
+matthew@matthew-VirtualBox:~/Downloads/iib-10.0.0.8/server/bin$ which node
+/home/matthew/Downloads/iib-10.0.0.8/common/node/bin/node
+matthew@matthew-VirtualBox:~/Downloads/iib-10.0.0.8/server/bin$ node --version
+v4.7.2
+matthew@matthew-VirtualBox:~/Downloads/iib-10.0.0.8/server/bin$ npm --version
+4.5.0
+matthew@matthew-VirtualBox:~/Downloads/iib-10.0.0.8/server/bin$ 
+
+```
 
 ### Loopback Connector
 
@@ -50,8 +66,7 @@ Using the developer's edition, things are started using the `iib tookit` command
 Ensure that these environment variables are set BEFORE starting.
 
 ```
-$ export DEBUG=*
-$ export MQSI_NODEJS_LOG_DESTINATION=/home/matthew/log4js.txt
+$ export DEBUG=* && export MQSI_NODEJS_LOG_DESTINATION=/home/matthew/log4js.txt
 $ ./iib toolkit
 ```
 
@@ -73,11 +88,16 @@ $ tail -f stderr
 
 The hex string `e414l....` will vary on your machine but is the 'Execution Group ID'
 
-Lots of other errors are reported to the syslog. 
+Other errors related to the IIB functionar are reported to the syslog. 
 
 ```
 $ tail -f /var/log/syslog | grep Integration
 ```
 
+Finally, the Hyperledger Composer log files (triggered by the `DEBUG` environment variable) will go to
+
+```
+$ tail -f ~/iibconfig
+```
 
 
