@@ -4,13 +4,14 @@ Produce a flow within IIB that includes the LoopbackRequestNode that uses loopba
 
 ## Sofwtare used
 - All this was performed on Ubuntu 16
-- Hyperledger Composer v0.7.1  PLUS fixes for the model in *loopback-connector-composer@0.7.2-20170510145522*
+- Hyperledger Composer v0.7.2
 - Hyperledger Fabric v1.0alpaha.1 (see the composer-tools)
 - IIB v10 Developers Edition
 
 ## Setup
 
 - IIB 10 Developer's Edition is very simple to install. 
+*Very important - that this needs to be IIB 10.0.0.8 to get an updated version of node. *
 - Hyperledger Composer - establish a working scenario, for example the getting started digitalproperty-network. First time, use the getting-started guide from the Hyperledger Composer site.
 
 - IIB Profile
