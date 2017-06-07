@@ -34,10 +34,11 @@ matthew@matthew-VirtualBox:~/Downloads/iib-10.0.0.8/server/bin$
 ### Loopback Connector
 
 1. Open a command prompt and run the mqsiprofile command
-2. Update the version of npm
+2. Update the version of npm  (do not use npm v5)
+    `npm install npm@4.6.0 -g`
 3. `cd ~/iibconfig/node_modules`
 4. `npm install loopback-connector-composer`
-5. `cd ~/iibconfig/connector/loopback`
+5. `cd ~/iibconfig/connectors/loopback`
 6. create this file - changing the business network id, etc as required.
 ```
 {
